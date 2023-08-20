@@ -3,7 +3,6 @@
 /**
  * g_err - calls the error according the builtin, syntax or permission
  * @inpsh: ...
- * @datash: data structure that contains arguments
  * @eval: error value
  * Return: error
  */
