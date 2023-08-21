@@ -22,3 +22,39 @@ void free_dvar_list(d_var **head)
 		*head = NULL;
 	}
 }
+
+/**
+ * add_dvar_n - function to add a new node to the end of 'd_var' linked
+ * list to store info about replacement variables
+ * @head: ...
+ * @dvar: ...
+ * @wght: ...
+ * @dwgth: ...
+ * Return: ...
+ */
+d_var *add_dvar_n(d_var **head, int dvar, char *wght, int dwght)
+{
+	d_var *nw, *tmp;
+
+	nw = malloc(sizeof(d_var));
+	if (nw == NULL)
+		return (NULL);
+
+	nw->dim_var = dvar;
+	nw->wght = wght;
+	nw->dim_wght = dwght;
+
+	nw->fward = NULL;
+	tmp = *head;
+
+	if (tmp == NULL)
+		*head - nw;
+
+	else
+	{
+		while (tmp->fward != NULL)
+			tmp = tmp->fward;
+		tmp->fward = nw;
+	}
+	return (*head);
+}
