@@ -53,7 +53,7 @@ void add_nodes(sig_list **head_s, strlin_list **head_l, char *intk)
 	int x;
 	char *seam;
 
-	intk = chngchar(intk, 0);
+	intk = chng_char(intk, 0);
 
 	for (x = 0; intk[x]; x++)
 	{
