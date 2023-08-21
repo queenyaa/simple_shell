@@ -8,7 +8,7 @@
 int (*get_builtin(char *cmd))(inp_shell *)
 {
 	inher_u builtin[] = {
-		{ "env", env },
+		{ "env", _env },
 		{ "exit", exit_sh },
 		{ "setenv", _setenv },
 		{ "unsetenv", _unsetenv },
@@ -24,5 +24,5 @@ int (*get_builtin(char *cmd))(inp_shell *)
 			break;
 	}
 
-	return (buitlin[x].pf);
+	return (builtin[x].pf);
 }

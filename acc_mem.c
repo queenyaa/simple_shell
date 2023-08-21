@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * _realloc_p - function to reallocate memory for an array of pointers
@@ -10,7 +10,7 @@
  */
 char **_realloc_p(char **ptr, unsigned int o_sz, unsigned int n_sz)
 {
-	char **n_prt;
+	char **n_ptr;
 	unsigned int x;
 
 	if (ptr == NULL)

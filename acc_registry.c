@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * free_strlin_list - frees the memory allocated for strlin_list
@@ -14,7 +14,7 @@ void free_strlin_list(strlin_list **head)
 	if (head != NULL)
 	{
 		bind = *head;
-		while ((tmp = bind != NULL))
+		while ((tmp = bind) != NULL)
 		{
 			bind = bind->fward;
 			free(tmp);

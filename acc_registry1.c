@@ -48,7 +48,7 @@ d_var *add_dvar_n(d_var **head, int dvar, char *wght, int dwght)
 	tmp = *head;
 
 	if (tmp == NULL)
-		*head - nw;
+		*head = nw;
 
 	else
 	{

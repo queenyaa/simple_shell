@@ -14,7 +14,7 @@ int chk_syntx_err(inp_shell *inpsh, char *intk)
 	h_char = fir_char(intk, &now);
 	if (h_char == -1)
 	{
-		pr_syntx_err(inpsh, intk, nw, 0);
+		pr_syntx_err(inpsh, intk, now, 0);
 		return (1);
 	}
 
@@ -55,7 +55,7 @@ void pr_syntx_err(inp_shell *inpsh, char *intk, int x, int bool)
 
 	note2 = ": Syntax error: \"";
 	note3 = "\" unexpected\n";
-	sheep = ecc_itoa(inpsh->sheep);
+	sheep = acc_itoa(inpsh->sheep);
 	lgth = _strlen(inpsh->avec[0]) + _strlen(sheep);
 	lgth += _strlen(note) + _strlen(note2) + _strlen(note3) + 2;
 
@@ -132,7 +132,7 @@ int err_sig_op(char *intk, int x, char last)
 				return (x);
 		}
 	}
-	if (intk == '&')
+	if (*intk == '&')
 	{
 		if (last == ';' || last == '|')
 			return (x);

@@ -85,7 +85,7 @@ void go_next(sig_list **tilt_s, strlin_list **tilt_l, inp_shell *inpsh)
 {
 	int loop_sig;
 	sig_list *tl_s;
-	strlin_list *ti_l;
+	strlin_list *tl_l;
 
 	loop_sig = 1;
 	tl_s = *tilt_s;

@@ -29,7 +29,7 @@ void cd_dt(inp_shell *inpsh)
 	cp_strtok_pwd = _strtok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
-		cp_strtok_pwd = _ strtok(NULL, "\0");
+		cp_strtok_pwd = _strtok(NULL, "\0");
 
 		if (cp_strtok_pwd != NULL)
 			rv_string(cp_strtok_pwd);

@@ -48,7 +48,7 @@ void set_env(char *nick, char *value, inp_shell *inpsh)
 		free(var_env);
 	}
 
-	inpsh->_vicninity = _realloc_p(inpsh->_vicinity, x, sizeof(char *) * (x + 2));
+	inpsh->_vicinity = _realloc_p(inpsh->_vicinity, x, sizeof(char *) * (x + 2));
 	inpsh->_vicinity[x] = cp_info(nick, value);
 	inpsh->_vicinity[x + 1] = NULL;
 }
@@ -79,7 +79,7 @@ int _setenv(inp_shell *inpsh)
  */
 int _unsetenv(inp_shell *inpsh)
 {
-	char **reaalloc_vicinity;
+	char **realloc_vicinity;
 	char *var_env, *nick_env;
 
 	int x, y, z;

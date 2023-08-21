@@ -11,7 +11,7 @@ void br_seam(char **seamptr, size_t *m, char *buff, size_t y)
 	if (*seamptr == NULL)
 	{
 		if (y > LOAD)
-			*mm = y;
+			*m = y;
 		else
 			*m = LOAD;
 		*seamptr = buff;
@@ -70,7 +70,7 @@ ssize_t get_seam(char **seamptr, size_t *m, FILE *strm)
 		}
 		if (intk >= LOAD)
 			buff = _realloc_(buff, intk, intk + 1);
-		buff[ink] = tt;
+		buff[intk] = tt;
 		intk++;
 	}
 	buff[intk] = '\0';

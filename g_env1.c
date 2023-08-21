@@ -6,7 +6,7 @@
  * @nick: name passed
  * Return: 0 if not equal, another if they are
  */
-int cmp_env_nick(const char *nenv, cinst char *nick)
+int cmp_env_nick(const char *nenv, const char *nick)
 {
 	int x;
 

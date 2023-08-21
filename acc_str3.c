@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * rv_string - function that reverses the characters in a string

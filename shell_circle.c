@@ -12,7 +12,7 @@ char *wout_comm(char *in)
 	upda = 0;
 	for (x = 0; in[x]; x++)
 	{
-		if (in[x]; == '#')
+		if (in[x] == '#')
 		{
 			if (x == 0)
 			{

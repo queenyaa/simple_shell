@@ -13,7 +13,7 @@ char *err_g_cd(inp_shell *inpsh)
 	v_str = acc_itoa(inpsh->sheep);
 	if (inpsh->argt[1][0] == '-')
 	{
-		not = ": Illegal option ";
+		note = ": Illegal option ";
 		lgth_id = 2;
 	}
 	else
@@ -121,7 +121,7 @@ char *err_exit_shell(inp_shell *inpsh)
 
 	v_str = acc_itoa(inpsh->sheep);
 	lgth = _strlen(inpsh->avec[0]) + _strlen(v_str);
-	lgth += _strlen(inpsh->argt[0]) + _strlen(inp->argt[1]) + 23;
+	lgth += _strlen(inpsh->argt[0]) + _strlen(inpsh->argt[1]) + 23;
 	err = malloc(sizeof(char) * (lgth + 1));
 	if (err == 0)
 	{

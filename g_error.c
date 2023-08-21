@@ -22,9 +22,9 @@ int g_err(inp_shell *inpsh, int eval)
 			err = err_nfound(inpsh);
 			break;
 		case 2:
-			if (_strcmp("exit", inpsh->argt[0] == 0)
+			if (_strcmp("exit", inpsh->argt[0]) == 0)
 				err = err_exit_shell(inpsh);
-			else if (_strcmp("cd", inpsh->argt[0] == 0)
+			else if (_strcmp("cd", inpsh->argt[0]) == 0)
 				err = err_g_cd(inpsh);
 			break;
 	}
@@ -35,6 +35,6 @@ int g_err(inp_shell *inpsh, int eval)
 		free(err);
 	}
 
-	inpsh->present = eval;
+	inpsh->presnt = eval;
 	return (eval);
 }

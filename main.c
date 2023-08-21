@@ -27,7 +27,7 @@ void set_inp(inp_shell *inpsh, char **avec)
 {
 	unsigned int x;
 
-	inosh->avec = avec;
+	inpsh->avec = avec;
 	inpsh->intk = NULL;
 	inpsh->argt = NULL;
 	inpsh->presnt = 0;

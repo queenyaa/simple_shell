@@ -12,7 +12,7 @@ int exit_sh(inp_shell *inpsh)
 	int str_len;
 	int bnum;
 
-	if (insp->argt[1] != NULL)
+	if (inpsh->argt[1] != NULL)
 	{
 		ustat = _atoi(inpsh->argt[1]);
 		is_dig = _isdigit(inpsh->argt[1]);

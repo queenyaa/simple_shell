@@ -140,7 +140,7 @@ char *rd_seam(int *x_eof);
 /* split.c */
 char *chng_char(char *intk, int bool);
 void add_nodes(sig_list **head_s, strlin_list **head_l, char *intk);
-void go_next(sig_list **list_s, strlin_list, **list_l, inp_shell *inpsh);
+void go_next(sig_list **list_s, strlin_list **list_l, inp_shell *inpsh);
 int split_cmds(inp_shell *inpsh, char *intk);
 char **split_seam(char *intk);
 

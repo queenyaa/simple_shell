@@ -14,7 +14,7 @@ int g_help(inp_shell *inpsh)
 	else if (_strcmp(inpsh->argt[1], "env") == 0)
 		acc_help_env();
 	else if (_strcmp(inpsh->argt[1], "unsetenv") == 0)
-		acc_help_unsetenv
+		acc_help_unsetenv();
 	else if (_strcmp(inpsh->argt[1], "help") == 0)
 		acc_help();
 	else if (_strcmp(inpsh->argt[1], "exit") == 0)
@@ -27,6 +27,6 @@ int g_help(inp_shell *inpsh)
 		write(STDERR_FILENO, inpsh->argt[0],
 			_strlen(inpsh->argt[0]));
 
-	inpsh->present = 0;
+	inpsh->presnt = 0;
 	return (1);
 }

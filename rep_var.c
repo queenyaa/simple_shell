@@ -155,7 +155,7 @@ char *rep_var(char *intk, inp_shell *inpsh)
 		return (intk);
 	}
 
-	ctaal = head;
+	catal = head;
 	nlen = 0;
 
 	while (catal != NULL)
