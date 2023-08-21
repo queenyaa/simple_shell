@@ -3,8 +3,8 @@
 /**
  * free_strlin_list - frees the memory allocated for strlin_list
  * linked list
- * @head: ...
- * Return: ...
+ * @head: head of the linked list
+ * Return: address of the head
  */
 void free_strlin_list(strlin_list **head)
 {
@@ -26,9 +26,9 @@ void free_strlin_list(strlin_list **head)
 /**
  * add_dim_tail - function adds a new node to the end of the strlin_list
  * linked list to store command lines
- * @head: ...
- * @seam: ...
- * Return: ...
+ * @head: head of the linked list
+ * @seam: command line
+ * Return: address of the head
  */
 strlin_list *add_dim_tail(strlin_list **head, char *seam)
 {
@@ -57,8 +57,8 @@ strlin_list *add_dim_tail(strlin_list **head, char *seam)
 /**
  * free_sig_list - function to free memory allocated for the sig_list
  * linked list
- * @head: ...
- * Return: ...
+ * @head: head of the linked list
+ * Return: address of the head
  */
 void free_sig_list(sig_list **head)
 {
@@ -80,9 +80,9 @@ void free_sig_list(sig_list **head)
 /**
  * add_sig_tail - function to add a new node to the end of the sig_list
  * linked list to store separators found in the user unput
- * @head: ...
- * @sig: ...
- * Return: ...
+ * @head: head of the linked list
+ * @sig: separator found (; | &)
+ * Return: address of the head
  */
 sig_list *add_sig_tail(sig_list **head, char sig)
 {

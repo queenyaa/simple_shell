@@ -2,11 +2,11 @@
 
 /**
  * _realloc_p - function to reallocate memory for an array of pointers
- * @ptr: ...
- * @o_sz: ...
- * @n_sz: ...
+ * @ptr: double pointer to the memory previously allocated
+ * @o_sz: size, in bytes, of the allocated space of ptr
+ * @n_sz: new size in bytes, of the new memory block
  *
- * Return: ...
+ * Return: nothing
  */
 char **_realloc_p(char **ptr, unsigned int o_sz, unsigned int n_sz)
 {
@@ -33,10 +33,10 @@ char **_realloc_p(char **ptr, unsigned int o_sz, unsigned int n_sz)
 
 /**
  * _realloc_ - function that reallocates memory for a given block of memory
- * @ptr: ...
- * @o_sz: ...
- * @n_sz: ...
- * Return: ...
+ * @ptr: pointer to the memory previously allocated
+ * @o_sz: size, in bytes, of the allocated space of ptr
+ * @n_sz: new size in bytes, of the new memory block
+ * Return: nothing
  */
 void *_realloc_(void *ptr, unsigned int o_sz, unsigned int n_sz)
 {
@@ -68,10 +68,10 @@ void *_realloc_(void *ptr, unsigned int o_sz, unsigned int n_sz)
 
 /**
  * _memcpy - performs a memory copy between two void pointers
- * @n_ptr: ...
- * @ptr: ...
- * @sz: ...
- * Return: ...
+ * @n_ptr: destination pointer
+ * @ptr: source pointer
+ * @sz: size of the new pointer
+ * Return: nothing
  */
 void _memcpy(void *n_ptr, const void *ptr, unsigned int sz)
 {

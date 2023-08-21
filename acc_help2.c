@@ -2,7 +2,7 @@
 
 /**
  * acc_help_cd - displays help info for the 'cd' cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help_cd(void)
 {
@@ -15,7 +15,7 @@ void acc_help_cd(void)
 
 /**
  * acc_help_alias - displays help info for the 'alias' cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help_alias(void)
 {
@@ -28,7 +28,7 @@ void acc_help_alias(void)
 
 /**
  * acc_help - displays help info for the 'help' cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help(void)
 {

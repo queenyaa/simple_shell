@@ -2,8 +2,8 @@
 
 /**
  * err_env - generates error message related to 'env' command
- * @inpsh: ...
- * Return: ...
+ * @inpsh: data relevant (counter, arguments)
+ * Return: the error string
  */
 char *err_env(inp_shell *inpsh)
 {
@@ -39,8 +39,8 @@ char *err_env(inp_shell *inpsh)
 /**
  * err_path_126 - generates error message for when an execution
  * of a command's path is invalid or permission is denied
- * @inpsh: ...
- * Return: ...
+ * @inpsh: data relevant (counter, arguments)
+ * Return: error message
  */
 char *err_path_126(inp_shell *inpsh)
 {

@@ -2,8 +2,8 @@
 
 /**
  * err_g_cd - generates an error message specific to 'cd' command
- * @inpsh: ...
- * Return: ...
+ * @inpsh: data relevant (directory)
+ * Return: Error message
  */
 char *err_g_cd(inp_shell *inpsh)
 {
@@ -40,8 +40,8 @@ char *err_g_cd(inp_shell *inpsh)
 
 /**
  * err_nfound - generates a generic error message when command is not found
- * @inpsh: ...
- * Return: ...
+ * @inpsh: data relevant (directory)
+ * Return: Error message
  */
 char *err_nfound(inp_shell *inpsh)
 {
@@ -73,11 +73,11 @@ char *err_nfound(inp_shell *inpsh)
 
 /**
  * strcat_cd - function to concatenate error messages related to 'cd'
- * @inpsh: ...
- * @note: ...
- * @err: ...
- * @v_str: ...
- * Return: ...
+ * @inpsh: data relevant (directory)
+ * @note: message to print
+ * @err: output message
+ * @v_str: counter lines
+ * Return: Error message
  */
 char *strcat_cd(inp_shell *inpsh, char *note, char *err, char *v_str)
 {
@@ -110,8 +110,8 @@ char *strcat_cd(inp_shell *inpsh, char *note, char *err, char *v_str)
 /**
  * err_exit_shell - error message to display when 'exit' command
  * is not used appropriately
- * @inpsh: ...
- * Return: ...
+ * @inpsh: data relevant (counter, arguments)
+ * Return: Error message
  */
 char *err_exit_shell(inp_shell *inpsh)
 {

@@ -3,7 +3,7 @@
 /**
  * acc_help_general - function to provide general entry point
  * for help information
- * Return: ...
+ * Return: none
  */
 void acc_help_general(void)
 {
@@ -26,7 +26,7 @@ void acc_help_general(void)
 
 /**
  * acc_help_exit - provides general entry point for help info
- * Return: ...
+ * Return: nothing
  */
 void acc_help_exit(void)
 {
@@ -41,7 +41,7 @@ void acc_help_exit(void)
 
 /**
  * acc_help_unsetenv - displays help info for the 'unsetenv' built-in cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help_unsetenv(void)
 {
@@ -54,7 +54,7 @@ void acc_help_unsetenv(void)
 
 /**
  * acc_help_env - displays help info for 'env' builtin cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help_env(void)
 {
@@ -67,7 +67,7 @@ void acc_help_env(void)
 
 /**
  * acc_help_setenv - displays help info for 'setenv' builtin cmd
- * Return: ...
+ * Return: nothing
  */
 void acc_help_setenv(void)
 {
