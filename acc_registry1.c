@@ -3,8 +3,8 @@
 /**
  * free_dvar_list - function to free the memory allocated for
  * d_var linked list
- * @head: ...
- * Return: ...
+ * @head: head of the linked list
+ * Return: none
  */
 void free_dvar_list(d_var **head)
 {
@@ -26,11 +26,11 @@ void free_dvar_list(d_var **head)
 /**
  * add_dvar_n - function to add a new node to the end of 'd_var' linked
  * list to store info about replacement variables
- * @head: ...
- * @dvar: ...
- * @wght: ...
- * @dwgth: ...
- * Return: ...
+ * @head: head of the linked list
+ * @dvar: d something
+ * @wght: idk
+ * @dwght: idk
+ * Return: address of the head
  */
 d_var *add_dvar_n(d_var **head, int dvar, char *wght, int dwght)
 {
