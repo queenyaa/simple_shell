@@ -1,10 +1,11 @@
 #include "shell.h"
 /**
- * cmp_env_nick - compares env variables names
- * with the name passed.
+ * cmp_env_nick - compares env variable's name
+ * with a given name.
  * @nenv: name of the environment variable
- * @nick: name passed
- * Return: 0 if not equal, another if they are
+ * @nick: name to compare
+ * Return: 0 if not equal, otherwise the length
+ * of the common prefix(up to '=' charater) plus 1
  */
 int cmp_env_nick(const char *nenv, const char *nick)
 {
@@ -22,9 +23,9 @@ int cmp_env_nick(const char *nenv, const char *nick)
 }
 
 /**
- * _getenv - get an environment variable
+ * _getenv - retrieves the value of an environment variable
  * @nick: name of the environment variable
- * @_vicinity: environment variable
+ * @_vicinity: environment variable array
  * Return: value of the environment variable if found
  * otherwise, NULL
  */
@@ -54,7 +55,7 @@ char *_getenv(const char *nick, char **_vicinity)
 
 /**
  * _env - prints the environment variables
- * @inpsh: data relevant
+ * @inpsh: pointer to the data structure
  * Return: 1 on success
  */
 int _env(inp_shell *inpsh)

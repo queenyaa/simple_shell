@@ -1,10 +1,11 @@
 #include "shell.h"
 
 /**
- * g_err - calls the error according the builtin, syntax or permission
- * @inpsh: ...
+ * g_err - function thatcalls the error according the built-in,
+ * syntax or permission
+ * @inpsh: data structure containing arguments and other relevant data
  * @eval: error value
- * Return: error
+ * Return: error (eval)
  */
 int g_err(inp_shell *inpsh, int eval)
 {

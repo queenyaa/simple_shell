@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * g_help - function that retrieves help messages according builtin
- * @inpsh: dta structure (args and input)
- * Return: Return 0
+ * g_help - function that retrieves help messages according built-in
+ * command specified as an argument
+ * @inpsh: data structure (args and input)
+ * Return: 1 on success
  */
 int g_help(inp_shell *inpsh)
 {

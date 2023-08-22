@@ -3,9 +3,9 @@
 /**
  * chk_syntx_err - intermediate function to find and print
  * syntax error
- * @inpsh: ...
- * @intk: ...
- * Return: ...
+ * @inpsh: pointer to the data structure
+ * @intk: pointer to the input string
+ * Return: 1 if there is syntax error, '0' if success
  */
 int chk_syntx_err(inp_shell *inpsh, char *intk)
 {
@@ -29,11 +29,11 @@ int chk_syntx_err(inp_shell *inpsh, char *intk)
 
 /**
  * pr_syntx_err - prints a syntax error message to STDERR
- * @inpsh: ...
- * @intk: ...
- * @x: ...
- * @bool: ...
- * Return: ...
+ * @inpsh: pointer to the data structure
+ * @intk: pointer to the input string
+ * @x: index of the error
+ * @bool: boolean to control the message error
+ * Return: No return
  */
 void pr_syntx_err(inp_shell *inpsh, char *intk, int x, int bool)
 {
@@ -80,9 +80,10 @@ void pr_syntx_err(inp_shell *inpsh, char *intk, int x, int bool)
 
 /**
  * fir_char - finds the index of the 2st non-space char in a string
- * @intk: ...
- * @x: ...
- * Return: ...
+ * @intk: pointer to the input string
+ * @x: index
+ * Return: '-1' if the first char is a separator operator,
+ * '0' otherwise
  */
 int fir_char(char *intk, int *x)
 {
@@ -100,10 +101,11 @@ int fir_char(char *intk, int *x)
 
 /**
  * err_sig_op - finds syntax errors related to separator operators ';, |, &'
- * @intk: ...
- * @x: ..
- * @last: ...
- * Return: ...
+ * @intk: pointer to the input string
+ * @x: index
+ * @last: last char read
+ * Return: Index of the syntax error if found,
+ * '0' if no error
  */
 int err_sig_op(char *intk, int x, char last)
 {

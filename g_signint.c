@@ -1,7 +1,10 @@
 #include "shell.h"
+
 /**
- * g_signint - handle the ctrl + c call in prompt
+ * g_signint - function to handle the 'SIGNINT',
+ * the ctrl + c call in prompt
  * @sym: signal handler
+ * Return: Nothing
  */
 void g_signint(int sym)
 {

@@ -1,9 +1,12 @@
 #include "shell.h"
 
 /**
- * exec_line - finds builtins and commands
- * @inpsh: relevant data? (argt)
- * Return: 1
+ * exec_line - function is responsible for determining whether
+ * the input command  is a built-in command or an external command
+ * and then dispatching the appropriate action
+ * @inpsh: pointer to the data structure (argt)
+ * that holds command-related information
+ * Return: 1 on success
  */
 int exec_line(inp_shell *inpsh)
 {

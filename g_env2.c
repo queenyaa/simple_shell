@@ -3,7 +3,7 @@
  * cp_info - copies info to create a new env or alias
  * @nick: name (env or alias)
  * @value: value (env or alias)
- * Return: new env or alias
+ * Return: pointer to the newly created string
  */
 char *cp_info(char *nick, char *value)
 {
@@ -23,10 +23,11 @@ char *cp_info(char *nick, char *value)
 }
 
 /**
- * set_env - sets an environment variable
+ * set_env - sets an environment variable to a specified value
+ * or creates a new environment variable
  * @nick: name of the environment variable
- * @inpsh: data structure (environ)
- * @value: ...
+ * @inpsh: pointer to data structure (environ)
+ * @value: value of the environment variable
  * Return: no return
  */
 void set_env(char *nick, char *value, inp_shell *inpsh)
@@ -54,7 +55,7 @@ void set_env(char *nick, char *value, inp_shell *inpsh)
 }
 
 /**
- * _setenv - compares env variables names
+ * _setenv - executes the 'setenv' command to set env variables names
  * with the name passed
  * @inpsh: data relevant (env name and env value)
  * Return: 1 on success
@@ -73,7 +74,8 @@ int _setenv(inp_shell *inpsh)
 }
 
 /**
- * _unsetenv - deletes an environment variable
+ * _unsetenv - executes the 'unsetenv' command and
+ * deletes an environment variable
  * @inpsh: data relevant (env name)
  * Return: 1 on success
  */
@@ -120,4 +122,3 @@ int _unsetenv(inp_shell *inpsh)
 	inpsh->_vicinity = realloc_vicinity;
 	return (1);
 }
-

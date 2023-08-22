@@ -2,8 +2,9 @@
 
 /**
  * exit_sh - function to handle the "exit" command.
- * @inpsh: ...
- * Return: ...
+ * @inpsh: pointer to the data structure that holds
+ * command-related information
+ * Return: 0 on success
  */
 int exit_sh(inp_shell *inpsh)
 {

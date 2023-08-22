@@ -2,9 +2,9 @@
 
 /**
  * _which_ - function to locate the command in the system's PATH
- * @cmd: ...
- * @_vicinity: ...
- * Return: ...
+ * @cmd: command name
+ * @_vicinity: environmental variable
+ * Return: Location of the command executable, 'NULL' if not found
  */
 char *_which_(char *cmd, char **_vicinity)
 {
@@ -52,9 +52,9 @@ char *_which_(char *cmd, char **_vicinity)
 /**
  * _cdir - function to check if a c ':' exists in the currently
  * directory path
- * @road: ...
- * @x: ...
- * Return: ...
+ * @road: pointer to the directory path
+ * @x: pointer to an index
+ * Return: 1 if a ':' is found, '0' otherwise
  */
 int _cdir(char *road, int *x)
 {
@@ -72,9 +72,9 @@ int _cdir(char *road, int *x)
 /**
  * chk_err_cmd - function to verify if the user has permissions to access
  * the cmd
- * @dir: ...
- * @inpsh: ...
- * Return: ...
+ * @dir: directory path to the command
+ * @inpsh: pointer to the data structure
+ * Return: 1 if there is an error, 0 if not
  */
 int chk_err_cmd(char *dir, inp_shell *inpsh)
 {
@@ -106,8 +106,8 @@ int chk_err_cmd(char *dir, inp_shell *inpsh)
 
 /**
  * _exe_ - function to determine if a command is executable
- * @inpsh: ...
- * Return: ...
+ * @inpsh: pointer to the data structure
+ * Return: -1 for permission error, 0 if not executable
  */
 int _exe_(inp_shell *inpsh)
 {
@@ -150,8 +150,9 @@ int _exe_(inp_shell *inpsh)
 /**
  * cmd_execut - function to execute command lines by forking a new
  * process and executing the dired command
- * @inpsh: ...
- * Return: ...
+ * @inpsh: pointer to the data structure (contains
+ * command arguments and input)
+ * Return: 1 on success
  */
 int cmd_execut(inp_shell *inpsh)
 {
