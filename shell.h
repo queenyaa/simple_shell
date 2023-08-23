@@ -214,6 +214,9 @@ int g_err(inp_shell *inpsh, int eval);
 /* g_signint.c */
 void g_signint(int sym);
 
+/* r_shell */
+int r_shell(void);
+
 /* acc_help.c */
 void acc_help_setenv(void);
 void acc_help_env(void);

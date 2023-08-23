@@ -3,33 +3,34 @@
 #define MAX_INPUT_SIZE 1024
 
 /**
- * main - entry point
+ * r_shell - entry point
  * Return: 0
  */
-int main(void)
+int r_shell(void)
 {
-	char input[MAX_INPUT_SIZE];
+	char intk[MAX_INPUT_SIZE];
+	pid_t pid;
 	int status;
 
 	while (1)
 	{
 		printf("simple_shell$ ");
-		if (fgets(input, sizeof(input), stdin) == NULL)
+		if (fgets(intk, sizeof(intk), stdin) == NULL)
 		{
 			printf("\n");
 			break;
 		}
 
-		input[_strlen(input) - 1] = '\0';
+		intk[_strlen(intk) - 1] = '\0';
 
-		pid_t pid = fork();
+		pid = fork();
 		if (pid == -1)
 			perror("fork");
 		else if (pid == 0)
 		{
-			if (execlp(input, input, NULL) == -1)
+			if (execlp(intk, intk, NULL) == -1)
 			{
-				perror(input);
+				perror(intk);
 				exit(1);
 			}
 		}
@@ -41,9 +42,9 @@ int main(void)
 				if (WEXITSTATUS(status) != 0)
 					printf("Command exited with status %d\n", WEXITSTATUS(status));
 			}
-		}
-		else if (WIFSIGNALED(status))
+			else if (WIFSIGNALED(status))
 			printf("Command terminated by signal %d\n", WTERMSIG(status));
+		}
 	}
 	return (0);
 }
