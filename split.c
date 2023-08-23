@@ -168,8 +168,8 @@ int split_cmds(inp_shell *inpsh, char *intk)
 char **split_seam(char *intk)
 {
 	size_t bsz;
-	size_t x;
-	char **parsings;
+	size_t x, i;
+	char **parsings, **n_pars;
 	char *parsing;
 
 	bsz = PAR_LOAD;
@@ -188,16 +188,19 @@ char **split_seam(char *intk)
 		if (x == bsz)
 		{
 			bsz += PAR_LOAD;
-			parsings = _realloc_p(parsings, x, sizeof(char *) * bsz);
-			if (parsings == NULL)
+			n_pars = _realloc_p(parsings, x, sizeof(char *) * bsz);
+			if (n_pars == NULL)
 			{
+				for (i = 0; i < x; i++)
+					free(parsings[i]);
+				free(parsings);
 				write(STDERR_FILENO, ": allocation error\n", 18);
 				exit(EXIT_FAILURE);
 			}
+			parsings = n_pars;
 		}
 		parsing = _strtok(NULL, PAR_SHORT);
 		parsings[x] = parsing;
 	}
-
 	return (parsings);
 }

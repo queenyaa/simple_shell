@@ -42,8 +42,7 @@ ssize_t get_seam(char **seamptr, size_t *m, FILE *strm)
 	int x;
 	static ssize_t intk;
 	ssize_t rtval;
-	char *buff;
-	char tt = 'z';
+	char *buff, tt = 'z';
 
 	if (intk == 0)
 		fflush(strm);
@@ -76,6 +75,7 @@ ssize_t get_seam(char **seamptr, size_t *m, FILE *strm)
 	buff[intk] = '\0';
 	br_seam(seamptr, m, buff, intk);
 	rtval = intk;
+	free(buff);
 	if (x != 0)
 		intk = 0;
 	return (rtval);

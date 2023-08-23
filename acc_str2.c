@@ -18,6 +18,33 @@ int _isdigit(const char *t)
 }
 
 /**
+ * cp_chars - function to compare characters of a string with
+ * characters from a delimiter string
+ * @str: ...
+ * @shrt: ...
+ * Return: ...
+ */
+int cp_chars(char str[], const char *shrt)
+{
+	unsigned int x, y, z;
+
+	for (x = 0, z = 0; str[x]; x++)
+	{
+		for (y = 0; str[y]; y++)
+		{
+			if (str[x] == shrt[y])
+			{
+				z++;
+				break;
+			}
+		}
+	}
+	if (x == z)
+		return (1);
+	return (0);
+}
+
+/**
  * _strtok - function that splits a string into tokens using
  * as specified delimiter.
  * @str: ...
@@ -63,33 +90,6 @@ char *_strtok(char str[], const char *shrt)
 	if (bool == 0)
 		return (NULL);
 	return (str_b);
-}
-
-/**
- * cp_chars - function to compare characters of a string with
- * characters from a delimiter string
- * @str: ...
- * @shrt: ...
- * Return: ...
- */
-int cp_chars(char str[], const char *shrt)
-{
-	unsigned int x, y, z;
-
-	for (x = 0, z = 0; str[x]; x++)
-	{
-		for (y = 0; str[x]; x++)
-		{
-			if (str[x] == shrt[y])
-			{
-				z++;
-				break;
-			}
-		}
-	}
-	if (x == z)
-		return (1);
-	return (0);
 }
 
 /**

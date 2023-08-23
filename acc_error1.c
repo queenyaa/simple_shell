@@ -66,6 +66,8 @@ char *err_nfound(inp_shell *inpsh)
 	_strcat(err, inpsh->argt[0]);
 	_strcat(err, ": not found\n");
 	_strcat(err, "\0");
+
+	free(err);
 	free(v_str);
 
 	return (err);
@@ -81,7 +83,6 @@ char *err_nfound(inp_shell *inpsh)
  */
 char *strcat_cd(inp_shell *inpsh, char *note, char *err, char *v_str)
 {
-	char *red_flag;
 
 	_strcpy(err, inpsh->avec[0]);
 	_strcat(err, ": ");
@@ -91,12 +92,8 @@ char *strcat_cd(inp_shell *inpsh, char *note, char *err, char *v_str)
 	_strcat(err, note);
 	if (inpsh->argt[1][0] == '-')
 	{
-		red_flag = malloc(3);
-		red_flag[0] = '-';
-		red_flag[1] = inpsh->argt[1][1];
-		red_flag[2] = '\0';
-		_strcat(err, red_flag);
-		free(red_flag);
+		_strcat(err, "-");
+		_strcat(err, &(inpsh->argt[1][1]));
 	}
 	else
 		_strcat(err, inpsh->argt[1]);
