@@ -42,4 +42,32 @@ This is a custom shell implementation written in C. It provides basic shell func
    ```
    $ ls -l
    ```
+2. Using environment variables:
+   ```
+   $ setenv MY_VAR Hello
+   $ echo $MY_VAR
+   Hello
+   ```
+
+3. Variable expansion:
+   ```
+   $ echo $$
+   1234   # Process ID
+
+   $ echo $?
+   0      # Exit status of last command
+   ```
+
+4. Command chaining:
+   ```
+   $ ls -l ; pwd
+   ```
+
+## Notes
+- This shell is a basic implementation and may not cover all edge cases.
+- This project is for educational purposes and may not be suitable for production use.
+
+##Auhors
+queenyaa (https://github.com/queenyaa)
+eoasante98 (https://github.com/eoasante98)
 
