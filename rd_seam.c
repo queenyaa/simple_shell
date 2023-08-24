@@ -20,7 +20,5 @@ char *rd_seam(int *x_eof)
 
 	*x_eof = getline(&intk, &load, stdin);
 
-	free(intk);
-
 	return (intk);
 }
