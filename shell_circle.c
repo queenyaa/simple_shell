@@ -9,9 +9,6 @@ char *wout_comm(char *in)
 {
 	int x, upda;
 
-	if (in == NULL)
-		return (NULL);
-
 	upda = 0;
 	for (x = 0; in[x]; x++)
 	{
